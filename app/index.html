@@ -12,8 +12,8 @@
     <title>Ethereum Block Explorer</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="bower_components/web3/dist/web3.min.js"></script>
 
 </head>
@@ -23,7 +23,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <span class="icon-bar"></span><a href="/#/" class="navbar-brand">Ether Block Explorer</a>
+                <span class="icon-bar"></span><a href="./#!/" class="navbar-brand">Ether Block Explorer</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -31,7 +31,7 @@
                         class="navbar-form navbar-right">
                         <div class="form-group">
                             <input type="text" placeholder="Tx Hash, Address or Block number" name="requestType"
-                                required ng-model="ethRequest" class="form-control"><br>
+                                required ng-model="ethRequest" class="form-control" size=70><br>
                         </div>
                         <button type="submit" class="btn btn-success">Search</button>
                     </form>
@@ -46,50 +46,51 @@
 
     <!--Libs-->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!--Core-->
-    <script src="app.js"></script>
+    <script src="bower_components/abi-decoder/dist/abi-decoder.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <<!--Core-->
+        <script src="app.js"></script>
 
-    <!--Controllers-->
-    <script src="scripts/controllers/mainController.js"></script>
-    <script src="scripts/controllers/addressInfoController.js"></script>
-    <script src="scripts/controllers/blockInfosController.js"></script>
-    <script src="scripts/controllers/transactionInfosController.js"></script>
+        <!--Controllers-->
+        <script src="scripts/controllers/mainController.js"></script>
+        <script src="scripts/controllers/addressInfoController.js"></script>
+        <script src="scripts/controllers/blockInfosController.js"></script>
+        <script src="scripts/controllers/transactionInfosController.js"></script>
 
-    <!--Services-->
-    <div id="connectwarning" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+        <!--Services-->
+        <div id="connectwarning" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <center>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Allow Access to Geth and Refresh the Page</h4>
-                    </div>
-                    <div class="modal-body">
-                        <code><p id="modaltext"></p></code>
-                    </div>
-                </center>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <center>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Allow Access to Geth and Refresh the Page</h4>
+                        </div>
+                        <div class="modal-body">
+                            <code><p id="modaltext"></p></code>
+                        </div>
+                    </center>
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="footer" style="bottom: 0px;text-align: center;background-color: white; width:100%;">
-        <footer>
-            <hr>
-            <p>
-                © Etherparty.io 2017 | <a href="http://github.com/etherparty/explorer">Fork me on GitHub</a>
-            </p>
-        </footer>
-    </div>
-    <script>
-        $("#modaltext").text('geth --rpc --rpccorsdomain "' + window.location.protocol + '//' + window.location.host + '"');
-    </script>
+        <div class="footer" style="bottom: 0px;text-align: center;background-color: white; width:100%;">
+            <footer>
+                <hr>
+                <p>
+                    © Etherparty.io 2017 | <a href="http://github.com/etherparty/explorer">Fork me on GitHub</a>
+                </p>
+            </footer>
+        </div>
+        <script>
+            $("#modaltext").text('geth --rpc --rpccorsdomain "' + window.location.protocol + '//' + window.location.host + '"');
+        </script>
 </body>
 
 </html>
