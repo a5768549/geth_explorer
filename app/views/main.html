@@ -1,17 +1,17 @@
 <div class="container" style="padding-top: 50px;">
 
 	<h4 style="text-align:center; margin-top: 30px;">
-		<a href="./#/block/{{blockNum}}">Latest Block: {{blockNum}}</a>
+		<a href="./#/block/{{blockNum}}">最新區塊: {{blockNum}}</a>
 	</h4>
 
 	<table class="table table-striped" cellpadding="0" cellspacing="0"
 		style="padding:0px;float:left;margin:0px;width:100%">
 		<tbody>
 			<tr>
-				<th>Block #</th>
+				<th>區塊代碼</th>
 				<th>Tx #</th>
 				<th>Size</th>
-				<th>Timestamp</th>
+				<th>時間戳</th>
 			</tr>
 			<tr data-ng-repeat="i in blocks">
 				<td><a href="./#!/block/{{i.number}}">{{i.number}}</a></td>

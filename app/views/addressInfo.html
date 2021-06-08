@@ -1,6 +1,6 @@
 <div class="container" style="padding-top: 50px;">
-    <h1>Address
-        <small>View information about an Ethereum Address</small>
+    <h1>地址
+        <small>查看該地址的詳細資訊</small>
     </h1>
 
     <div id="address-97785883" class="addressdiv">
@@ -15,11 +15,11 @@
         <table class="table table-striped">
             <tbody>
                 <tr>
-                    <td>Balance (Wei)</td>
+                    <td>餘額 (Wei)</td>
                     <td>{{balance}}</a></td>
                 </tr>
                 <tr>
-                    <td>Balance (Ether)</td>
+                    <td>餘額 (Ether)</td>
                     <td>{{balanceInEther}}</a></td>
                 </tr>
             </tbody>
@@ -28,8 +28,8 @@
     </div>
 
     <h2 style="margin-top: 30px;">
-        Transactions
-        <small>- for/to this address (last 1000 blocks)</small>
+        交易
+        <small>- 這個地址上的交易 (最新1000個區塊)</small>
     </h2>
 
     <div ng-repeat="tx in transactions">
@@ -51,7 +51,7 @@
                     <td><a href="./#/address/{{tx.to}}">{{tx.to}}</a></td>
                 </tr>
                 <tr>
-                    <td>Contract Address</td>
+                    <td>合約地址</td>
                     <td><a href="./#/address/{{tx.contractAddress}}">{{tx.contractAddress || '??'}}</a></td>
                 </tr>
                 <tr>

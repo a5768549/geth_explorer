@@ -1,7 +1,7 @@
 <div class="container" style="padding-top: 50px;">
 
-    <h1>Block
-        <small>View information about an Ethereum Block</small>
+    <h1>區塊
+        <small>顯示區塊的詳細資訊</small>
     </h1>
 
     <div id="block-97785883" class="blockdiv">
@@ -16,25 +16,25 @@
         </table>
         <div style="padding-bottom:30px;width:100%;text-align:right;clear:both">
             <button class="btn btn-primary">{{conf}}</button>
-            <button class="btn btn-success cb"><span>{{gasUsed}} Gas Used</span></button>
+            <button class="btn btn-success cb"><span>使用 {{gasUsed}} Gas</span></button>
         </div>
         <table class="table table-striped">
             <tbody>
                 <tr>
-                    <th colspan="2" style="text-align:left">Summary</th>
+                    <th colspan="2" style="text-align:left">概要</th>
                 </tr>
                 <tr>
-                    <td>Block Number</td>
+                    <td>區塊代碼</td>
                     <td><a href="./#!/block/{{blockNumber}}">{{number}}</a></td>
                 </tr>
                 <tr>
-                    <td>Received Time</td>
+                    <td>處理時間</td>
                     <td>
                         {{timestamp | date:'yyyy-MM-dd HH:mm:ss Z'}}
                     </td>
                 </tr>
                 <tr>
-                    <td>Difficulty</td>
+                    <td>難度</td>
                     <td>
                         {{difficulty}}
                     </td>
@@ -48,11 +48,11 @@
                     <td>{{size}}</td>
                 </tr>
                 <tr>
-                    <td>Miner</td>
+                    <td>礦工</td>
                     <td><a href="./#!/address/{{miner}}">{{miner}}</a></td>
                 </tr>
                 <tr>
-                    <td>Gas Limit</td>
+                    <td>Gas 限制</td>
                     <td>{{gasLimit}}</td>
                 </tr>
                 <tr>
@@ -60,12 +60,12 @@
                     <td>{{txCount}}</td>
                 </tr>
                 <tr>
-                    <td>Data</td>
+                    <td>資料</td>
                     <td>{{extraData}}</td>
                 </tr>
 
                 <tr>
-                    <td>Data (Translated)</td>
+                    <td>資料 (翻譯後)</td>
                     <td>{{dataFromHex}}</td>
                 </tr>
 
@@ -74,15 +74,15 @@
     </div>
 
     <h2 style="margin-top: 30px;">
-        Transactions
-        <small>- contained in current block</small>
+        交易
+        <small>- 包含當前的區塊中</small>
     </h2>
 
     <div ng-repeat="tx in transactions">
         <table class="table table-striped">
             <tbody>
                 <tr>
-                    <th colspan="2" style="text-align:left">Transaction #{{$index+1}}</th>
+                    <th colspan="2" style="text-align:left">交易 #{{$index+1}}</th>
                 </tr>
                 <tr>
                     <td>Hash #</td>
@@ -101,11 +101,7 @@
                     <td>{{tx.value}}</a></td>
                 </tr>
                 <tr>
-                    <td>Contract Address</td>
-                    <td><a href="./#/address/{{tx.contractAddress}}">{{tx.contractAddress || '??'}}</a></td>
-                </tr>
-                <tr>
-                    <td>Contract Address</td>
+                    <td>合約地址</td>
                     <td><a href="./#/address/{{tx.contractAddress}}">{{tx.contractAddress || '??'}}</a></td>
                 </tr>
                 <tr>

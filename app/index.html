@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ethereum Block Explorer</title>
+    <title>Geth 區塊瀏覽器</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./styles/main.css">
@@ -23,17 +23,17 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <span class="icon-bar"></span><a href="./#!/" class="navbar-brand">Ether Block Explorer</a>
+                <span class="icon-bar"></span><a href="./#!/" class="navbar-brand">Geth 區塊瀏覽器</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <form name="search_form" ng-controller="mainCtrl" ng-submit="processRequest()"
                         class="navbar-form navbar-right">
                         <div class="form-group">
-                            <input type="text" placeholder="Tx Hash, Address or Block number" name="requestType"
+                            <input type="text" placeholder="Tx Hash, 地址或區塊代碼" name="requestType"
                                 required ng-model="ethRequest" class="form-control" size=70><br>
                         </div>
-                        <button type="submit" class="btn btn-success">Search</button>
+                        <button type="submit" class="btn btn-success">查詢</button>
                     </form>
                 </ul>
             </div>
@@ -84,7 +84,10 @@
             <footer>
                 <hr>
                 <p>
-                    © Etherparty.io 2017 | <a href="http://github.com/etherparty/explorer">Fork me on GitHub</a>
+                    © Etherparty.io 2017 | <a href="https://github.com/etherparty/explorer">Github</a>
+                </p>
+                <p>
+                    @a5768549 翻譯、修改功能 2021 | <a href="https://github.com/a5768549/geth_explorer">Github</a>
                 </p>
             </footer>
         </div>

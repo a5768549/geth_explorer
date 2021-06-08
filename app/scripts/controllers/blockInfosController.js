@@ -37,9 +37,9 @@ angular
                     $scope.size = result.size;
                     $scope.txCount = result.transactions.length;
                     if ($scope.blockNumber !== undefined) {
-                        $scope.conf = number - $scope.blockNumber + " Confirmations";
-                        if ($scope.conf === 0 + " Confirmations") {
-                            $scope.conf = "Unconfirmed";
+                        $scope.conf = number - $scope.blockNumber + " 確認";
+                        if ($scope.conf === 0 + " 確認") {
+                            $scope.conf = "不需確認";
                         }
                     }
                     if ($scope.blockNumber !== undefined) {
