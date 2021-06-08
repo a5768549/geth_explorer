@@ -63,6 +63,10 @@
                     <td><a href="./#/address/{{contractAddress}}">{{contractAddress || '??'}}</a></td>
                 </tr>
                 <tr>
+                    <td>Contract Address</td>
+                    <td><a href="./#/address/{{contractAddress}}">{{contractAddress || '??'}}</a></td>
+                </tr>
+                <tr>
                     <td>Gas Sent</td>
                     <td>{{gas}}</td>
                 </tr>
@@ -94,7 +98,9 @@
                 </tr>
                 <tr>
                     <td>Decoded input</td>
-                    <td><pre>{{decoded}}</pre></td>
+                    <td>
+                        <pre>{{decoded}}</pre>
+                    </td>
                 </tr>
             </tbody>
         </table>

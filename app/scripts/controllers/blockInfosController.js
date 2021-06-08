@@ -107,8 +107,16 @@ angular
                             }
                             //console.log(transaction);
 
-                            $scope.$apply($scope.transactions.push(transaction));
-                        }); // getTransactionReceipt()
+                            web3.eth.getTransactionReceipt(result.hash, function (err2, receipt) {
+                                if(!err2) {
+                                    for (var attrname in receipt) { transaction[attrname] = receipt[attrname]; }
+                                }
+                
+                                $scope.$apply(
+                                  $scope.transactions.push(transaction)
+                                );
+                              });
+                            });
                     }
                 ); // getTransactionFromBlock ()
             } // for each tx in block

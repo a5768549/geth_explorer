@@ -48,7 +48,7 @@ angular
                     if ($scope.blockNumber !== undefined) {
                         var info = web3.eth.getBlock($scope.blockNumber);
                         if (info !== undefined) {
-                            $scope.time = info.timestamp + '000';
+                            $scope.time = info.timestamp + "000";
                         }
                     }
 
@@ -79,9 +79,11 @@ angular
 
                 web3.eth.getTransaction($scope.txId, function (error, result) {
                     if (!error) {
-                        web3.eth.getTransactionReceipt($scope.txId,function(err2, receipt) {
-                            if(!err2) {
-                                for (var attrname in receipt) { result[attrname] = receipt[attrname]; }
+                        web3.eth.getTransactionReceipt($scope.txId, function (err2, receipt) {
+                            if (!err2) {
+                                for (var attrname in receipt) {
+                                    result[attrname] = receipt[attrname];
+                                }
                             }
                             deferred.resolve(result);
                         });
