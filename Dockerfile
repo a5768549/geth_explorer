@@ -1,11 +1,14 @@
-FROM ubuntu:16.04
-
-RUN apt-get update && apt-get install -y nodejs npm
-RUN apt-get install -y curl && npm cache clean -f && npm install -g n && n stable
-RUN apt-get install -y net-tools
+FROM node:14.17.0-alpine
 
 WORKDIR /explorer
 COPY . .
 
 EXPOSE 8000
-CMD ["npm","start"]
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
+RUN npm install --global bower
+RUN npm install --global http-server
+RUN bower install
+RUN npm install
+RUN npm audit fix
+CMD npm start
