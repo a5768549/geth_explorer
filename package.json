@@ -1,5 +1,5 @@
 {
-  "name": "GethExplorer",
+  "name": "gethexplorer",
   "private": false,
   "version": "1.0.1",
   "description": "A lightweight Geth block explorer",
