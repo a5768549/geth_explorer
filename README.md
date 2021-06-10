@@ -1,6 +1,6 @@
 # Geth_Explorer
 
-![EthExplorer Screenshot](https://imgur.com/FmvsS2Y)
+![EthExplorer Screenshot](https://imgur.com/FmvsS2Y.png)
 
 ## 授權(根據原作者授權)
 
